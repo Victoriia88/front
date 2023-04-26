@@ -3,5 +3,5 @@
 
 hours = prompt('Specify the number of hours?');
 hoursToNumber = parseInt (hours);
-seconds = hoursToNumber * 60;
+seconds = hoursToNumber * 60 * 60;
 alert('In ' + hoursToNumber + ' hours we have ' + seconds + ' seconds!');
