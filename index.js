@@ -1,118 +1,107 @@
-// 1
-let taskFirst = 10;
+// Знайти суму та кількість позитивних елементів
+let arrayConst = [16, -37, 54, -4, 72, -56, 47, 4, -16, 25, -37, 46, 4, -51, 27, -63, 4, -54, 76, -4, 12, -35, 4, 47,];
 
-while (taskFirst <= 20) {
-  document.write(taskFirst);
-  
-  if (taskFirst < 20) {
-    document.write(", ");
+let sumPositive = 0;
+let countPositive = 0;
+for (i = 0; i < arrayConst.length; i++) {
+  if (arrayConst[i] > 0) {
+    sumPositive += arrayConst[i];
+    countPositive++;
   }
-  
-  taskFirst++;
 }
-// 2 
-let taskSecond = 10;
+console.log(`Sum of positive elements: ${sumPositive}`);
+console.log(`Count of positive elements: ${countPositive}`);
 
-while (taskSecond <= 20){
-taskSecond++;
-
-console.log(taskSecond * taskSecond);
-}
-
-
-// 3
-let taskThird = 1;
-
-while (taskThird <= 10){
-taskThird++;   
-
-console.log(7 * taskThird);
-}
-
-// 4
-let sum = 0;
-let taskFour = 1;
-
-while (taskFour <= 15){
-sum += taskFour;
-taskFour++;
-}
-
-console.log(sum);
-
-// 5
-let taskFive = 15;
-let multiplication = 1;
-
-while (taskFive <= 35){
-multiplication *= taskFive;
-taskFive++;
-}
-
-console.log(multiplication);
-
-// 6
-let taskSix = 1;
-let sumSix = 0;
-let average = 0;
-
-while (taskSix <= 500){
-sumSix += taskSix;
-taskSix++;
-average++;
-}
-
-console.log(sumSix/average);
-
-// 7
-let taskSeven = 30;
-let sumSeven = 0;
-
-while (taskSeven <= 80){
-    if (!(taskSeven%2)){
-        sumSeven +=  taskSeven;
-    }
-taskSeven++;
-}
-
-console.log(sumSeven);
-
-// 8
-let taskEight = 100;
-
-while (taskEight <= 200){
-    if (!(taskEight%3)){
-    console.log(taskEight);
-    }
-taskEight++;
-}
-
-// 9-10-11
-let taskNine = parseInt(prompt('Please enter any number?'));
-let i = 1;
-let countTen = 0;
-let sumEleven = 0;
-
-while (i <= taskNine){
-    if(taskNine % i === 0){
-    console.log(i);
-    if(i % 2 === 0){
-        countTen++;
-        sumEleven += i;
-    }
-}
-    i++;
-}
-
-console.log(`Count even numbers = ${countTen}. Sum of even numbers= ${sumEleven} `);
-
-// 12
-let firstNum = 1;
-while (firstNum <= 10) {
-  let secondNum = 1;
-  while (secondNum <= 10) {
-    console.log(`${firstNum} * ${secondNum} = ${firstNum*secondNum}`);
-    secondNum++;
+// Знайти мінімальний елемент масиву та його порядковий номер
+let minElement = arrayConst[0];
+let minIndex = 0;
+for (i = 1; i < arrayConst.length; i++) {
+  if (arrayConst[i] < minElement) {
+    minElement = arrayConst[i];
+    minIndex = i;
   }
-  firstNum++;
 }
+console.log(`Minimum element: ${minElement}`);
+console.log(`Number in the order of the minimum element: ${minIndex}`);
+
+// Знайти максимальний елемент масиву та його порядковий номер
+let maxElement = arrayConst[0];
+let maxIndex = 0;
+for (i = 1; i < arrayConst.length; i++) {
+  if (arrayConst[i] > maxElement) {
+    maxElement = arrayConst[i];
+    maxIndex = i;
+  }
+}
+console.log(`Maximum element: ${maxElement}`);
+console.log(`Number in the order of the maximum element: ${maxIndex}`);
+
+// Визначити кількість негативних елементів
+let countNegative = 0;
+for (i = 0; i < arrayConst.length; i++) {
+  if (arrayConst[i] < 0) {
+    countNegative++;
+  }
+}
+console.log(`Count of negative elements: ${countNegative}`);
+
+// Знайти кількість непарних позитивних елементів
+let countOddPositive = 0;
+for (i = 0; i < arrayConst.length; i++) {
+  if (arrayConst[i] > 0 && arrayConst[i] % 2 !== 0) {
+    countOddPositive++;
+  }
+}
+console.log(`Count of odd positive elements: ${countOddPositive}`);
+
+// Знайти кількість парних позитивних елементів
+let countEvenPositive = 0;
+for (i = 0; i < arrayConst.length; i++) {
+  if (arrayConst[i] > 0 && arrayConst[i] % 2 === 0) {
+    countEvenPositive++;
+  }
+}
+console.log(`Count of even positive elements: ${countEvenPositive}`);
+
+// Знайти суму парних позитивних елементів
+let sumEvenPositive = 0;
+for (i = 0; i < arrayConst.length; i++) {
+  if (arrayConst[i] > 0 && arrayConst[i] % 2 === 0) {
+    sumEvenPositive += arrayConst[i];
+  }
+}
+console.log(`Sum of even positive elements: ${sumEvenPositive}`);
+
+// Знайти суму непарних позитивних елементів
+let sumOddPositive = 0;
+for (i = 0; i < arrayConst.length; i++) {
+  if (arrayConst[i] > 0 && arrayConst[i] % 2 !== 0) {
+    sumOddPositive += arrayConst[i];
+  }
+}
+console.log(`Sum of odd positive elements: ${sumOddPositive}`);
+
+// Знайти добуток позитивних елементів
+let productPositive = 1;
+for (i = 0; i < arrayConst.length; i++) {
+  if (arrayConst[i] > 0) {
+    productPositive *= arrayConst[i];
+  }
+}
+console.log(`Product of positive elements: ${productPositive}`);
+
+// Знайти найбільший серед елементів масиву, остальні обнулити
+let maxValue = arrayConst[0];
+for (i = 1; i < arrayConst.length; i++) {
+  if (arrayConst[i] > maxValue) {
+    maxValue = arrayConst[i];
+  }
+}
+for (i = 0; i < arrayConst.length; i++) {
+  if (arrayConst[i] !== maxValue) {
+    arrayConst[i] = 0;
+  }
+}
+console.log(
+  `The largest among the elements of the array, the rest are set to zero: ${arrayConst}`
+);
